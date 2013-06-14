@@ -1,16 +1,37 @@
-## Supports
+//
+//  ViewController.m
+//  KRYoutube
+//
+//  Created by Kalvar on 13/6/5.
+//  Copyright (c) 2013年 Kuo-Ming Lin. All rights reserved.
+//
 
-KRYoutube can upload a video to youtube, and you can update information of video or delete it. KRYoutube use ASIHttpRequest framework to connect the HTTP protocol, but the ASIHttpRequest already stop their maintain that don't worry about it can't use fluently. If you use ARC that you need to remember to setup ASIHttpRequest to be " -fno-objc-arc " in the 「TARGETS > Build Phases」 setting page.
+#import "ViewController.h"
 
-KRYoutube supports ARC.
+@interface ViewController ()
 
-## How To Get Started
+@property (nonatomic, weak) NSString *_youtubeVideoId;
 
-``` objective-c
-#import "KRYoutube.h"
+@end
 
-//Please Remembers to extend <KRYoutubeDelegate>
+@implementation ViewController
 
+@synthesize krYoutube;
+@synthesize _youtubeVideoId;
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma --mark
 -(void)uploadVideoProgress
 {
     CGFloat _uploadingProgress = [self.krYoutube getProgressFloatNumber];
@@ -47,7 +68,8 @@ KRYoutube supports ARC.
 
 #pragma KRYoutubeDelegate
 /*
- * @ Findish Upload Video.
+ * @ 完成上傳檔案
+ *   - Findish Upload Video.
  */
 -(void)krYoutubeDidUploadFinishedVideoId:(NSString *)_videoId videoInfo:(NSMutableDictionary *)_videoInfo
 {
@@ -57,7 +79,8 @@ KRYoutube supports ARC.
 }
 
 /*
- * @ Finish Update Video Info.
+ * @ 完成修改檔案
+ *   - Finish Update Video Info.
  */
 -(void)krYoutubeDidUpdateFinishedVideoId:(NSString *)_videoId videoInfo:(NSMutableDictionary *)_videoInfo
 {
@@ -65,19 +88,67 @@ KRYoutube supports ARC.
 }
 
 /*
- * @ Finish Delete Video.
+ * @ 完成刪除檔案
+ *   - Finish Delete Video.
  */
 -(void)krYoutubeDidDeleteFinishedVideoId:(NSString *)_videoId videoInfo:(NSMutableDictionary *)_videoInfo
 {
     
 }
-```
 
-## Version
+/*
+ * @ 上傳失敗
+ *   - Failed to Upload.
+ */
+-(void)krYoutubeDidFailToUploadErrors:(NSError *)_error
+{
+    
+}
 
-V1.0
+/*
+ * @ 修改失敗
+ *   - Failed to Update.
+ */
+-(void)krYoutubeDidFailToUpdateErrors:(NSError *)_error
+{
+    
+}
 
-## LICENSE
+/*
+ * @ 刪除失敗
+ *   - Failed to Delete.
+ */
+-(void)krYoutubeDidFailToDeleteErrors:(NSError *)_error
+{
+    
+}
 
-MIT.
+/*
+ * @ 通用請求失敗
+ *   - Received Error in Anytime.
+ */
+-(void)krYoutubeDidRecivedErrors:(NSError *)_error
+{
 
+}
+
+/*
+ * @ 取消請求
+ *   - Cancel the Http Request.
+ */
+-(void)krYoutubeDidCancelRequest
+{
+
+}
+
+/*
+ * @ 取消失敗
+ *   - OOPS, the Cancel is Failed.
+ */
+-(void)krYoutubeDidFailedCancelRequest
+{
+    
+}
+
+
+@end
