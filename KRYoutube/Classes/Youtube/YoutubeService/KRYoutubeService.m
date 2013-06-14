@@ -9,7 +9,6 @@
 #import "KRYoutubeService.h"
 #import "ASIFormDataRequest.h"
 
-static NSString *krYoutubeServiceDeveloperKey   = @"AI39si4_iz7SdtUerRZstyfjed5KFEoPaXgqa4BXmOf8aoy0ijOybZXWEk_oqaSxwqemf1zGWGiYp4nit34js57jVkN-BcoEVw";
 static NSString *krYoutubeServiceGoogleLoginURL = @"https://www.google.com/youtube/accounts/ClientLogin";
 static NSInteger krYoutubeSerivceProgressTag    = 9998;
 
@@ -265,7 +264,7 @@ static NSInteger krYoutubeSerivceProgressTag    = 9998;
         self.account         = [NSString stringWithFormat:@"%@", _account];
         self.password        = [NSString stringWithFormat:@"%@", _password];
         self.source          = [NSString stringWithFormat:@"%@", _source];
-        self.devKey          = [NSString stringWithFormat:@"%@", krYoutubeServiceDeveloperKey];
+        self.devKey          = [NSString stringWithFormat:@"%@", krYoutubeDeveloperKey];
         self.useSync         = YES;
         self.errors          = nil;
         self.executing       = krYoutubeServicesExecuteNothing;

@@ -8,8 +8,16 @@ KRYoutube supports ARC.
 
 ``` objective-c
 #import "KRYoutube.h"
+//Please Remembers to implement <KRYoutubeDelegate>
 
-//Please Remembers to extend <KRYoutubeDelegate>
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    /*
+     * You need to go to KRYoutubeService to setup the krYoutubeDeveloperKey first.
+     */
+    krYoutube = [[KRYoutube alloc] initWithDelegate:self];
+}
 
 -(void)uploadVideoProgress
 {

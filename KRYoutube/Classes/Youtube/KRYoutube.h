@@ -10,11 +10,6 @@
 
 #define SERVICE_TYPE_YOUTUBE  @"YOUTUBE"
 
-static NSString *krYoutubeDeveloperKey = @"Your Youtube Developer Key";
-static NSString *krYoutubeAccount      = @"Your Youtube Developer Email Account";
-static NSString *krYoutubePassword     = @"Your Youtube Developer Password";
-static NSString *krYoutubeSource       = @"The Source From Where, Ex : Your Name or Company";
-
 /*
  * @ Category supported after 2012.
  */

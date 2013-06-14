@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "KRYoutubeXMLParser.h"
 
+static NSString *krYoutubeDeveloperKey = @"Your Youtube Developer Key";
+static NSString *krYoutubeAccount      = @"Your Youtube Developer Email Account";
+static NSString *krYoutubePassword     = @"Your Youtube Developer Password";
+static NSString *krYoutubeSource       = @"The Source From Where, Ex : Your Name or Company";
+//
 static NSString *krYoutubeVideoURL            = @"video_url";
 static NSString *krYoutubeVideoTitle          = @"video_title";
 static NSString *krYoutubeVideoDescription    = @"video_description";
