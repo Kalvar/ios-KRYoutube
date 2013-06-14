@@ -1,12 +1,12 @@
 ## Supports
 
+KRYoutube supports ARC.
+
 KRYoutube can upload a video to youtube, and you can update information of video or delete it. 
 
 KRYoutube use ASIHttpRequest framework to connect the HTTP protocol, but the ASIHttpRequest already stop their maintain that don't worry about it can't use fluently. 
 
 If you use ARC that you need to remember to setup ASIHttpRequest to be " -fno-objc-arc " in the 「TARGETS > Build Phases」setting page.
-
-KRYoutube supports ARC.
 
 ## How To Get Started
 
